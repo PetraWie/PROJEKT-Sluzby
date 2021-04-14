@@ -25,6 +25,9 @@ font-family: 'Montserrat', sans-serif;
 margin:0;  
 }
 
+.box {
+    margin: 0 20px;
+}
 /* nemám nastavené medium, light, regular u písem... */
 
 h1 {
@@ -45,12 +48,15 @@ p {
 font-size: 16px;
 color: #8B8B8B;
 text-align: center;
-margin: 0 20px 30px 20px;
+/* margin: 0 20px 30px 20px; */
+margin-top: 30px;
 }
 
 .cestovatel {
-    margin: 60px 20px 40px 20px;
-    width: 100%;
+    /* margin: 60px 20px 40px 20px; */
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 100%;    
     display: block;
     text-align: center;
 }
@@ -91,7 +97,7 @@ margin: 0 20px 30px 20px;
     flex-direction: column;
     /* height: calc(100% - 30px); chtěla jsem nastavit mezery mezi rámečky na 15px mezi prvním a druhým, druhým a třetím..)*/
 	justify-content: space-between;
-	margin: 0 20px;
+	/* margin: 0 20px; */
 }
 
 	.ramecek {
@@ -115,9 +121,81 @@ margin: 0 20px 30px 20px;
         font-size: 13px;
     }
 
-.delegati h2{
+    .delegati h2{
     margin-top: 45px;
-}    
+}  
 
- @media screen and (min-width: 640px){}
+.karavan {
+    margin-bottom: 60px;
+}
+
+/* -------------------tablet------------------------ */
+
+ @media screen and (min-width: 640px){
+.box {
+    margin: 0 18px;
+}
+    .tlacitka {
+        display: flex;
+        flex-direction: row;
+        flex-basis: 550px;
+        justify-content: center;
+        /* margin: 0px auto; proč se mi to nesmrskne na střed */
+    }
+
+    .blue, .grey {
+        margin-top: 0px;
+        margin-bottom: 0px;
+    }
+
+h2 {
+    margin-bottom: 17px;
+}
+/* 
+p{
+    margin-bottom: 40px;
+} */
+
+.uvod, .sluzby, .delegati { /* proč mi to nefunguje??? */
+    max-width: 550px;
+    margin:0 auto;
+}
+
+.delegati, .sluzby {
+    margin-top: 80px;
+}
+
+.kontejner {
+    display: flex;
+    flex-basis: calc(100% - 30px);
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 40px;
+}
+
+	.ramecek {
+        display: flex;
+        flex-basis: 31%;
+        flex-direction: column; 
+        margin-bottom:0px;
+    }
+
+    .ramecek img {
+        justify-content: center; 
+        /* max-width: 50%;  */
+        margin: 40px auto 0;
+        padding: 0;
+    /* padding-left:20px; */
+    }
+
+    .ramecek .text {
+       padding: 0;
+       margin: 20px 15px;
+    }
+
+.dole {
+    margin-bottom: 60px;
+}
+    
+ }
  @media screen and (min-width:1100px){}
