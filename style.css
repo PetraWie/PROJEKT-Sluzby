@@ -1,0 +1,123 @@
+html { box-sizing: border-box; }
+*, ::before, ::after { box-sizing: inherit; }
+
+/* BARVY:
+pozadí stránky - bílá: #FAFAFA
+šedá: #8B8B8B
+primární modrá: #407BFF
+
+PÍSMO:
+font-family: 'Montserrat', sans-serif;
+H1 - Montserrat Medium, 28px, černá
+H2 - Montserrat Medium, 16px, černá 
+běžný text - Montserrat Light, 16px, šedá
+text na tlačítku - Montserrat Regular, 14px, bílá
+text v rámečku - Montserrat Light, 13 px, šedá
+
+BREAKPOINTY:
+mobil - do 640 px
+tablet - 640 px a více
+počítač - 1100px a více, maximální šířka obsahu 1040 a centr na střed 
+*/
+
+body {
+font-family: 'Montserrat', sans-serif; 
+margin:0;  
+}
+
+/* nemám nastavené medium, light, regular u písem... */
+
+h1 {
+font-size: 28px;
+color: black;
+text-align: center;
+margin: 40px 0;
+}
+
+h2 {
+font-size: 16px;
+color: black;
+text-align: center;
+margin: 60px 0 15px 0;
+}
+
+p {
+font-size: 16px;
+color: #8B8B8B;
+text-align: center;
+margin: 0 20px 30px 20px;
+}
+
+.cestovatel {
+    margin: 60px 20px 40px 20px;
+    width: 100%;
+    display: block;
+    text-align: center;
+}
+
+.tlacitko { /* proč jsou ty tlačítka tak hnusný? */
+    background-color: #407BFF; 
+    padding: 0;
+    border-radius: 30%;
+    border: none;
+    display: block;
+    text-align: center;
+    /* padding: 10px 30px; */
+    color: white;
+    margin: auto; /*-> zarovnání na střed */
+}
+
+.tlacitko a {
+    display: block;
+    padding: 10px 30px; 
+    text-decoration: none;
+    color:white;
+}
+
+.blue {
+    margin-bottom: 10px;
+    background-color: #407BFF;
+}
+
+.grey {
+    margin-bottom: 0px;  
+    background-color: #8B8B8B;
+}
+
+.kontejner {
+    display: flex;
+    flex-basis: 95%;
+	/* width: 100%; */
+    flex-direction: column;
+    /* height: calc(100% - 30px); chtěla jsem nastavit mezery mezi rámečky na 15px mezi prvním a druhým, druhým a třetím..)*/
+	justify-content: space-between;
+	margin: 0 20px;
+}
+
+	.ramecek {
+        display: flex;
+        flex-direction: row;
+		border: solid 1px none;
+		border-radius: 10px;
+		box-shadow: #407BFF 0 3px 5px -3px;
+        text-align: center;
+        margin-bottom: 15px;
+	}
+
+	.ramecek img {
+		max-width: 100%;
+        height: auto;  
+        padding-left:20px;
+    }
+    
+    .ramecek .text {
+        padding: 32px 20px 20px 26px;
+        font-size: 13px;
+    }
+
+.delegati h2{
+    margin-top: 45px;
+}    
+
+ @media screen and (min-width: 640px){}
+ @media screen and (min-width:1100px){}
