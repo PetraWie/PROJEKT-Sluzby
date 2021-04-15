@@ -61,6 +61,11 @@ margin-top: 30px;
     text-align: center;
 }
 
+.cara {
+    border: solid 2px #407BFF;
+    width: 90px;
+    margin: 0 auto;
+}
 .tlacitko { /* proč jsou ty tlačítka tak hnusný? */
     background-color: #407BFF; 
     padding: 0;
@@ -151,33 +156,48 @@ margin-top: 30px;
 h2 {
     margin-bottom: 17px;
 }
-/* 
-p{
-    margin-bottom: 40px;
-} */
 
-.uvod, .sluzby, .delegati { /* proč mi to nefunguje??? */
+.uvod, .cestovnikancelar, .delegati { 
     max-width: 550px;
     margin:0 auto;
 }
 
-.delegati, .sluzby {
+/* .delegati, .cestovnikancelar { zrušeno kvůli FLEXBOXU - nicméně - když jsem nechala 
+    margin-top nastavený zde a zrušila ho u kontejneru - hodily se mi rámečky pod sebe !? PROČ TO? 
+    margin-top: 80px;
+} */
+
+.kontejner { 
+    display: flex;
+    flex-basis: calc(100% - 30px);
+    flex-direction: column; /* z row změněno na column - TABLET FLEXBOX */
+    justify-content: space-between;
     margin-top: 80px;
 }
 
-.kontejner {
-    display: flex;
-    flex-basis: calc(100% - 30px);
-    flex-direction: row;
-    justify-content: space-between;
-    margin-top: 40px;
+.kontejner h2 {
+    margin-top: 0;
 }
+.cestovnikancelar, .delegati {  /* TABLET - FLEXBOX */
+	display: block;
+}
+
+.sekceramecky { /* TABLET - FLEXBOX */
+	display: flex;
+	max-width: 1099px;
+	margin: 0 auto;
+	flex-basis: calc(100% - 30px);
+	justify-content: space-between;
+	align-items: flex-start;
+    flex-wrap: nowrap;
+    align-items: stretch;
+    }
 
 	.ramecek {
         display: flex;
         flex-basis: 31%;
         flex-direction: column; 
-        margin-bottom:0px;
+        margin-bottom:0px; 
     }
 
     .ramecek img {
@@ -185,7 +205,6 @@ p{
         /* max-width: 50%;  */
         margin: 40px auto 0;
         padding: 0;
-    /* padding-left:20px; */
     }
 
     .ramecek .text {
@@ -196,6 +215,10 @@ p{
 .dole {
     margin-bottom: 60px;
 }
-    
+ 
+/* ---------------------- počítač --------------------------------- */
+
  }
- @media screen and (min-width:1100px){}
+ @media screen and (min-width:1100px){
+
+ }
