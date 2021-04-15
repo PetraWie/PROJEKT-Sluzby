@@ -23,6 +23,7 @@ počítač - 1100px a více, maximální šířka obsahu 1040 a centr na střed
 body {
 font-family: 'Montserrat', sans-serif; 
 margin:0;  
+background-color: #FAFAFA;
 }
 
 .box {
@@ -108,7 +109,7 @@ margin-top: 30px;
 	.ramecek {
         display: flex;
         flex-direction: row;
-		border: solid 1px none;
+		border: solid 1px transparent;
 		border-radius: 10px;
 		box-shadow: #407BFF 0 3px 5px -3px;
         text-align: center;
@@ -220,5 +221,83 @@ h2 {
 
  }
  @media screen and (min-width:1100px){
+
+.box {
+    margin: 0 80px;
+    max-width: 1040px;
+}
+
+.ramecek p {
+    font-size: 13px;
+    margin: 0;
+}
+
+.ramecek img {
+    margin-top:40px;
+    width: 35%;
+}
+.horizont1 {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.uvod {
+    padding-right: 30px;
+    text-align: left;
+}
+
+.horizont1 img {
+    max-width: 425px;
+    margin: auto;
+    display: block;
+    width: 100%;
+}
+
+.cestovatel, .uvod {
+    max-width: 490px;
+    justify-content: space-between;
+    margin: 0;
+}
+
+.cestovatel {
+    padding-left: 30px;
+}
+
+.kontejner {
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+}
+
+.cestovkatext {
+    padding-left: 60px;
+}
+
+.delegatitext {
+    padding-right: 60px;
+}
+
+.sekceramecky {
+    /* display: flex;
+    width: 550px;
+    justify-content: space-between;
+    flex-basis: 100%;
+    flex-grow: 1; */
+    display: flex;
+    flex-basis: 550px;
+    flex-grow: 1;
+}
+
+.cestovnikancelar, .delegati {
+    display: flex;
+    flex-basis: calc(100% - 550px);  /* pro docílení "přetékání na druhou stranu */
+    flex-shrink: 1;
+} 
+
+.dole {
+    flex-direction: row;
+}
 
  }
