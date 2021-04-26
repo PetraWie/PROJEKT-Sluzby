@@ -70,7 +70,7 @@ margin-top: 30px;
 .tlacitko { /* proč jsou ty tlačítka tak hnusný? */
     background-color: #407BFF; 
     padding: 0;
-    border-radius: 30%;
+    border-radius: 999px;
     border: none;
     display: block;
     text-align: center;
